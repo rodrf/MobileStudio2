@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".Realm">
+        </activity>
         <activity android:name=".EditTaskActivity">
         </activity>
         <activity android:name=".ListTODOActivity">
