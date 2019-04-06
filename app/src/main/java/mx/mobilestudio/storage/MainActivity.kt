@@ -7,8 +7,8 @@ import android.os.Bundle
 import android.util.Log
 
 const val preferencesName = "myLogingPreferences"
-class MainActivity : AppCompatActivity() {
 
+class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,10 +40,10 @@ class MainActivity : AppCompatActivity() {
 //        }
         val preferences = getSharedPreferences(preferencesName, Context.MODE_PRIVATE)
 
-        if (preferences?.getBoolean("isLogged", false)==true){
+        if (preferences?.getBoolean("isLogged", false) == true) {
             val intent = Intent(this@MainActivity, ListTODOActivity::class.java)
             startActivity(intent)
-        }else{
+        } else {
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
             startActivity(intent)
         }

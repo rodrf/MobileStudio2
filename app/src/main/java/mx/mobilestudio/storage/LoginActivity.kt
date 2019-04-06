@@ -12,17 +12,19 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        btnLogin?.setOnClickListener{
+        btnLogin?.setOnClickListener {
             val name = etLogin?.text?.toString()
-            if (!name.isNullOrBlank()){
+            if (!name.isNullOrBlank()) {
                 val preferences = getSharedPreferences(preferencesName, Context.MODE_PRIVATE)
                 preferences?.edit {
-                    putString("user_name",name)
+                    putString("user_name", name)
                     putBoolean("isLogged", true)
 
                 }
-                val intent = Intent(this@LoginActivity,
-                    ListTODOActivity::class.java)
+                val intent = Intent(
+                    this@LoginActivity,
+                    ListTODOActivity::class.java
+                )
                 startActivity(intent)
                 finish()
             }
